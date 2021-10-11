@@ -3,8 +3,18 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use App\Models\Plan;
-use App\Observers\PlanObserver;
+use App\Models\{
+    Category,
+    Plan,
+    Product,
+    Tenant
+};
+use App\Observers\{
+    CategoryObserver,
+    PlanObserver,
+    ProductObserver,
+    TenantObserver
+};
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -26,5 +36,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Plan::observe(PlanObserver::class);
+        Tenant::observe(TenantObserver::class);
+        Category::observe(CategoryObserver::class);
+        Product::observe(ProductObserver::class);
     }
 }

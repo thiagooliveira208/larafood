@@ -11,7 +11,7 @@
 
     <h1>Planos do Perfil <strong>{{ $profile->name }}</strong></h1>
         
-    <a href="{{ route('profiles.profiles.available', $profile->id) }}" class="btn btn-dark">ADD NOVA PERMISSÃO</i></a>
+    <a href="{{ route('plans.profiles.available', $profile->id) }}" class="btn btn-dark">ADD NOVA PERMISSÃO</i></a>
 @stop
 
 @section('content')

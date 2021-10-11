@@ -33,6 +33,6 @@ class CreateDetailPlansTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('detail_plan');
+        Schema::dropIfExists('details_plan');
     }
 }
